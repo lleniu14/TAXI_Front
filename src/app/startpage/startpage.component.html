@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords"
+		content="Cab Booking Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+	<!-- Meta tag Keywords -->
+
+
+	<!-- online-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Amaranth:400,400i,700,700i" rel="stylesheet">
+	<!--//online-fonts -->
+</head>
+
+<body>
+	<div class="header">
+		<h1>NewTaxi</h1>
+	</div>
+
+    <div class="w3-main">
+        <!-- Main -->
+        <div class="about-bottom">
+            <div class="w3l_about_bottom_right two">
+                <h2 class="tittle"><img src="../startpage/cabbg.jpg" alt=""><span>Zamów TAXI</span></h2>
+                <div class="book-form">
+                    <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <div class="form-date-w3-agileits">
+                                <div class="form-agileits">
+                                    <label> Kto :</label>
+                                </div>
+                                <div class="form-agileits-2">
+                                    <input type="text" name="fname" class="form-control" formControlName="name" />
+                                </div>
+                            </div>
+                        </div>
+                            <div class="form-group">
+                                <div class="form-date-w3-agileits">
+                                    <div class="form-agileits">
+                                        <label> Numer telefonu :</label>
+                                    </div>
+                                    <div class="form-agileits-2">
+                                        <input type="number" name="phoneNumber" class="form-control" formControlName="phoneNumber" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-date-w3-agileits">
+                                    <div class="form-agileits">
+                                        <label> Skąd :</label>
+                                    </div>
+                                    <div class="form-agileits-2">
+											<input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" 
+                                            placeholder="Punkt startowy" autocorrect="off" autocapitalize="off" 
+                                            spellcheck="off" type="text" #search formControlName="address"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+									<div class="form-date-w3-agileits">
+										<div class="form-agileits">
+											<label> Dokąd :</label>
+										</div>
+										<div class="form-agileits-2">
+												<input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" 
+                                                placeholder="Punkt docelowy" autocorrect="off" autocapitalize="off" 
+                                                spellcheck="off" type="text" #destination formControlName="destination"/>
+										</div>
+									</div>
+								</div>
+							<div class="form-group">
+									<div class="form-date-w3-agileits">
+										<div class="form-agileits">
+											<label> Liczba pasażerów :</label>
+										</div>
+										<div class="form-agileits-2">
+											<input type="number" name="passangers" class="form-control" formControlName="passengers"/>
+										</div>
+									</div>
+								</div>
+                            <div class="form-group">
+                                <button type="submit">Zamów TAXI</button>
+							</div>
+							<button routerLink="/login">ZALOGUJ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>
+    

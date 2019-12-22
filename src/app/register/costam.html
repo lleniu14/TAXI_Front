@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords"
+        content="Cab Booking Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+    <!-- Meta tag Keywords -->
+
+
+    <!-- online-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Amaranth:400,400i,700,700i" rel="stylesheet">
+    <!--//online-fonts -->
+</head>
+
+<body>
+    <div class="header">
+        <h1>NewTaxi</h1>
+    </div>
+
+    <div class="w3-main">
+        <!-- Main -->
+        <div class="about-bottom">
+            <div class="w3l_about_bottom_right two">
+                <h2 class="tittle"><img src="../login/cabbg.jpg" alt=""><span>Zaloguj</span></h2>
+                <div class="book-form">
+
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <input type="text" formControlName="firstName" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" formControlName="lastName" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                            <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                                <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+        </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required">Password is required</div>
+                                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">ZAREJESTRUJ</button>
+                        </div>
+                        <a routerLink="/login" class="btn btn-link">Register</a>
+                    </form>
+                </div>
+            </div>
+            <div class="clear"> </div>
+        </div>
+    </div>
+    <!-- //Main -->
+
+</body>
+
+</html>

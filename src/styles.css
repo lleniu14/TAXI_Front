@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+body{
+    background-color: #1c2228;
+    color: #ffffff;
+    height: 100%;
+    
+}

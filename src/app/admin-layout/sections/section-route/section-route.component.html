@@ -1,0 +1,34 @@
+<div class="section-container">
+  <agm-map [latitude]="lat" [longitude]="lng">
+    <agm-direction *ngIf = "load1&&load2" [origin]="origin" [destination]="destination">
+    </agm-direction>
+  </agm-map>
+  <button (click)= getDistanceAndTime()>getDistance</button>
+    <div>Odległość: {{distance}}</div>
+    <div>Czas przejazdu: {{duration}}</div>
+    <table class="table" table-inverse table-hover>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Imie</th>
+          <th>Nazwisko</th>
+          <th>Odległość</th>
+          <th>Czas przejazdu</th>
+          <th>Liczba miejsc</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let driverorder of driverOrderFromDb; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{driverorder.firstName}}</td>
+          <td>{{driverorder.lastName}}</td>
+          <td>{{driverorder.distance}}</td>
+          <td>{{driverorder.time}}</td>
+          <td>{{driverorder.seatsAmount}}</td>
+          <td><button type="button" class="btn btn-light" (click)="getDirection(driverorder)">Book</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

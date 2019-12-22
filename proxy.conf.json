@@ -1,0 +1,10 @@
+{
+    "/route": {
+      "target": "http://localhost:4200/route",
+      "secure": true,
+      "pathRewrite": {
+      "^/route": ""
+    },
+      "changeOrigin": true
+    }
+  }

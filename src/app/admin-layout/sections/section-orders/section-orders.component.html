@@ -1,0 +1,32 @@
+<div class="section-container">
+  <h2>Ostatnie zlecenia</h2>
+  <div><button type="button" class="btn btn-light" routerLink="add">Dodaj</button></div>
+  <table class="table" table-inverse table-hover>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Klient</th>
+        <th>Numer telefonu</th>
+        <th>Liczba pasażerów</th>
+        <th>Punkt odbioru</th>
+        <th>Punkt docelowy</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orderFromDb; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{order.name}}</td>
+        <td>{{order.phoneNumber}}</td>
+        <td>{{order.numberOfPassengers}}</td>
+        <td>{{order.address}}</td>
+        <td>{{order.destination}}</td>
+        <td><button type="button" class="btn btn-light" (click)="delete(order)">Usuń</button></td>
+        <td><button type="button" class="btn btn-light" (click)="update(order)">Edytuj</button></td>
+        <td><button type="button" class="btn btn-light" (click)="book(order)">Book</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

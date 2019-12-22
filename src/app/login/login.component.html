@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords"
+		content="Cab Booking Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+	<!-- Meta tag Keywords -->
+
+
+	<!-- online-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Amaranth:400,400i,700,700i" rel="stylesheet">
+	<!--//online-fonts -->
+</head>
+
+<body>
+	<div class="header">
+		<h1>NewTaxi</h1>
+	</div>
+
+	<div class="w3-main">
+		<!-- Main -->
+		<div class="about-bottom">
+			<div class="w3l_about_bottom_right two">
+				<h2 class="tittle"><img src="../login/cabbg.jpg" alt=""><span>Zaloguj</span></h2>
+				<div class="book-form">
+
+					<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+						<div class="form-group">
+							<div class="form-date-w3-agileits">
+								<div class="form-agileits">
+									<label> Login :</label>
+								</div>
+								<div class="form-agileits-2">
+									<input type="text" name="login" formControlName="username" class="form-control" />
+								</div>
+								<div class="clear"> </div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-date-w3-agileits second-agile">
+								<div class="form-agileits">
+									<label> Hasło :</label>
+								</div>
+								<div class="form-agileits-2">
+									<input type="password" name="password" formControlName="password"
+										class="form-control" />
+								</div>
+								<div class="clear"> </div>
+							</div>
+						</div>
+						<div class="form-group">
+							<button type="submit">ZALOGUJ</button>
+						</div>
+						<a routerLink="/register" class="btn btn-link" >Zarejestruj</a>
+					</form>
+				</div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+	</div>
+	<!-- //Main -->
+
+</body>
+
+</html>

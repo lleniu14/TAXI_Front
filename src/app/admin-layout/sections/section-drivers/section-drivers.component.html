@@ -1,0 +1,39 @@
+<div class="section-container">
+  <div>
+    <div><h2>Kierowcy</h2></div>
+       <div><button type="button" class="btn btn-light" routerLink="add">Dodaj</button></div> 
+      </div>
+        <table class="table" table-inverse table-hover>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Imie</th>
+              <th>Nazwisko</th>
+              <th>Pesel</th>
+              <th>Numer telefonu</th>
+              <th>Model samochodu</th>
+              <th>Nr rejestracyjny</th>
+              <th>Liczba miejsc w samochodzie</th>
+              <th>Pensja</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let driver of driverFromDb; let i = index">
+              <td>{{i+1}}</td>
+              <td>{{driver.firstName}}</td>
+              <td>{{driver.lastName}}</td>
+              <td>{{driver.pesel}}</td>
+              <td>{{driver.phoneNumber}}</td>
+              <td>{{driver.carModel}}</td>
+              <td>{{driver.registrationNumber}}</td>
+              <td>{{driver.seatsAmount}}</td>
+              <td>{{driver.salary}}</td>
+              <td><button type="button" class="btn btn-light" (click)="delete(driver)">Usuń</button></td>
+              <td><button type="button" class="btn btn-light" (click)="update(driver)">Edytuj</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <router-outlet></router-outlet>
+      </div>
