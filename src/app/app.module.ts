@@ -33,7 +33,7 @@ import { AlertComponent } from './_components';
     AdminLayoutModule,
     RouterModule.forRoot(appRoutes),
     AgmCoreModule.forRoot({
-      apiKey:'AIzaSyBEO23UGEveqhsXwHwGKa6WPbnklPeNAUc',
+      apiKey:'XYZ',
       libraries: ['places', 'geometry']
     }),
     HttpClientModule,
